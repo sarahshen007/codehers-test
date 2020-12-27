@@ -1,0 +1,579 @@
+:root {
+  --codehers-pink: #ff6f96;
+}
+
+* {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loading-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.loading-animation {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from { 
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  #nav-bar {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  #nav-bar > ul {
+    flex-direction: column;
+  }
+  .container {
+    margin-top: 80px;
+  }
+}
+
+#header {
+  background-color: rgba(255, 255, 255, 1); 
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+
+#header-img {
+  width: 250px;
+  display: block;
+  padding: 1.5rem;
+
+  transition-property: filter, width;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#header-img:hover {
+  filter: hue-rotate(360deg);
+  width: 260px;
+}
+
+.navigation > li {
+  width: auto;
+  margin: 10px;
+}
+
+#nav-bar > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-link {
+  font-family: 'Bebas Neue', monospace;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ff6f96;
+}
+
+.container {
+  position: relative;
+  height: 90px;
+  width: 100%;
+}
+
+#home-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  width: 100%;
+  padding: 80px;
+  background-color:#F5F3EF;
+  background-image: url("/pictures/background_blurry2.png");
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+
+#home-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  padding: 80px;
+  background-color: rgb(108, 190, 212);
+
+}
+
+#home-three {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 80px;
+  overflow-x: hidden;
+	background-color: #99264d;
+}
+
+#who-are-we-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+@media (max-width: 700px) {
+  #who-are-we-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.who-are-we-div {
+  position: relative;
+  padding: 20px 10px 20px 10px;
+  color: rgba(255,255,255,0.9);
+  border-bottom: 3px solid rgba(0,0,0,0);
+  justify-content: center;
+  margin: 0 auto;
+  width: 150px;
+}
+
+#who-are-we {
+  color: white;
+}
+
+#who-are-we h2 {
+  padding: 15px;
+  font-family: monospace;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+#who-are-we h3 {
+  font-family: monospace;
+}
+
+.who-are-we-div h4, p {
+  font-family: monospace;
+  color: white;
+}
+
+.who-are-we-div h4 {
+  font-size: 15px;
+  padding: 0px 0px 10px 0px;
+}
+
+#who-we-teach {
+  background-color: #766cd4;
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#who-we-teach:hover {
+  background-color: #867be0;
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+#how-we-teach {
+  background-color: #4fb164;
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#how-we-teach:hover {
+  background-color: #5fc775;
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+#what-we-teach {
+  background-color: #d4716c;
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#what-we-teach:hover {
+  background-color: #db7974;
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+#why-we-teach {
+  background-color: #e9ca4f;
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#why-we-teach:hover {
+  background-color: #f0d25a;
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.slide {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+.slide > q {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: strong;
+  color: white;
+}
+
+.slide > p {
+  font-style: italic;
+  color: white;
+}
+
+.reference {
+  color: aliceblue;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 20px 0px 0px 20px;
+  user-select: none;
+  transition-property: background-color, color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.prev:hover, .next:hover {
+  background-color: var(--codehers-pink);
+  color: black;
+}
+
+.dot-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.35s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--codehers-pink);
+}
+
+
+#footer-container {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#nav-footer {
+  padding-top: 30px;
+  width: 50%;
+  position: relative;
+}
+
+#nav-footer > ul {
+  list-style-type: none;
+}
+
+.nav-footer-link {
+  font-family: 'Bebas Neue', monospace;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+  transition: color 0.35s ease;
+  font-size: 20px;
+}
+
+.nav-footer-link:hover {
+  color: var(--codehers-pink);
+}
+
+.social-media-icon {
+  width: 30px;
+  transition: filter 0.35s ease;
+}
+
+.social-media-icon:hover {
+  filter: brightness(0.9) invert(.55) sepia(.3) hue-rotate(290deg) saturate(700%);
+}
+
+#credits-footer {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#extra-footer > p {
+  padding-top: 20px;
+  color: black;
+  font-family: monospace;
+}
+
+#lessons-one {
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  height: 80vh;
+  width: 100%;
+  padding: 80px;
+  background-image: url("pictures/unity.png");
+  background-position: center;
+  background-size: 200%;
+  background-attachment: fixed;
+  background-color: black;
+}
+
+#lessons-two {
+  color: black;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  padding-top: 60px;
+  background-color: #F5F3EF;
+  background-image: url("pictures/java.png");
+  overflow: hidden;
+
+}
+
+#lessons-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  padding: 40px;
+  background-color: #F5F3EF;
+  color: black;
+
+}
+
+#lessons-three > div > h2, #lessons-three > div > p  {
+  color: black;
+  font-family: 'Space Mono', monospace;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#offerings-title > h2 {
+  font-family: 'Space Mono', monospace;
+}
+
+#offerings-container {
+  max-width: 600px;
+  width: 100%;
+  padding-left: 80px;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  border: 3px solid #3E474F;
+  user-select: none;
+  transition-property: color, border;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+label:hover {
+  color: var(--codehers-pink);
+  border: 3px solid var(--codehers-pink);
+}
+
+label > div {
+  font-family: 'Space Mono', monospace;
+}
+
+label div:first-child {
+  width: 100%;
+  line-height: 45px;
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+.cross {
+  margin-right:15px;
+  margin-top:3px;
+}
+
+.cross:before,.cross:after {
+  content: '';
+  border-top: 2px solid #3E474F;
+  width: 15px;
+  display: block;
+  margin-top: 18px;
+  transition: 0.3s;
+}
+
+.cross:after {
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.content {
+  box-sizing: border-box;
+  font-size: 0.9em;
+  margin: 10px 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height, .5s;
+}
+
+.class-description, .class-req {
+  color: #3E474F;
+}
+
+input:checked ~ .content {
+  max-height: 400px;
+  transition: max-height, 1s;
+}
+
+input:checked ~ label .cross:before {
+  transform: rotate(180deg);
+}
+
+input:checked ~ label .cross:after {
+  transform: rotate(0deg);
+}
+
+.class-req > strong {
+  font-family: 'Space Mono', monospace;
+} 
+
+
+.transparent-layer {
+  background-position: center;
+  background-repeat: no repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 80%;
+  padding: 40px;
+}
+
+.transparent-layer > h2 {
+  font-size: 20px;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px var(--codehers-pink);
+}
+
+.btn {
+  margin-top: 30px;
+  font-family: 'Bebas Neue', monospace;
+  font-size: 1em;
+  letter-spacing: 2px;
+  padding: 10px 20px 10px 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 0px;
+  transition: ease-in-out, background-color .35s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--codehers-pink);
+  color: black;
+}
